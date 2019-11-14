@@ -17,6 +17,11 @@ playerRoute
             name,
             position
         }
+        for (const key in newPlayer){
+            if (!newPlayer[key]){
+                return res.status(400).json({ error: `Missing '${key}' in request body` });
+            }
+        }
         PlayersService.insertPlayer(newPlayer)
         res.status(201).json(newPlayer)
     })
@@ -35,6 +40,11 @@ playerRoute
             jersey_number,
             name,
             position
+        }
+        for (const key in playerToUpdate){
+            if (!playerToUpdate[key]){
+                return res.status(400).json({ error: `Missing '${key}' in request body` });
+            }
         }
         PlayersService.updatePlayer(
             req.params.player_index,
