@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "The front end code audition for ILM Professional Services",
   "scripts": {
-    "start": "node serve.js"
+    "start": "node serve.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,8 @@
   },
   "main": "serve.js",
   "devDependencies": {
-    "bootstrap": "4.3.1"
+    "bootstrap": "4.3.1",
+    "nodemon": "^1.19.4"
   },
   "dependencies": {
     "express": "^4.16.4"
