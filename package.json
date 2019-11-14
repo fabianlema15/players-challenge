@@ -1,0 +1,24 @@
+{
+  "name": "ilm-frontend-code-audition",
+  "version": "0.0.1",
+  "description": "The front end code audition for ILM Professional Services",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ilmservices.visualstudio.com/Code%20Auditions/_git/frontend"
+  },
+  "author": "Stephen Kelzer",
+  "license": "MIT",
+  "engines": {
+    "node": "8.13.0"
+  },
+  "main": "serve.js",
+  "devDependencies": {
+    "bootstrap": "4.3.1"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
