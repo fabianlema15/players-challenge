@@ -1,16 +1,5 @@
-const express = require('express');
-var path = require('path');
-const app = express();
 const port = 3000;
-
-// Setup static files
-app.use('/styles', express.static('node_modules/bootstrap/dist/css'));
-app.use('/scripts', express.static('node_modules/bootstrap/dist/js'));
-
-// Setup routes
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/frontend/mock.html'));
-});
+const app = require('./app');
 
 // start app
 app.listen(port, () => {
