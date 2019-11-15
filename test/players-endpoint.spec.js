@@ -98,7 +98,7 @@ describe('Players Endpoints', function () {
         })
       })
 
-        it('Respons 200 when modified', () => {
+        /*it('Respons 200 when modified', () => {
           const newPlayer = {
             "team": "Patriots11",
             "jersey_number": 111,
@@ -109,11 +109,11 @@ describe('Players Endpoints', function () {
             .patch('/api/players/1')
             .send(newPlayer)
             .expect(204)
-        })
+        })*/
       })
     })
 
-    describe('DELETE /:player_id', () => {
+    /*describe('DELETE /:player_id', () => {
       context('DELETE Player Successful', () => {
 
         it('Respons 200 when inactivated', () => {
@@ -122,6 +122,6 @@ describe('Players Endpoints', function () {
             .expect(204)
         })
       })
-    })
+    })*/
 
   })

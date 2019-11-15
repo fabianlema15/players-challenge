@@ -46,7 +46,7 @@ const functions = {
     }
 }
 
-const events = () => {
+const loadEvents = () => {
     $('#formModal').on('show.bs.modal', function (event) {
         const button = $(event.relatedTarget) // Button that triggered the modal
         const modal = $(this)
@@ -144,5 +144,5 @@ const events = () => {
     variables.setNumberResults($('#select-results').children("option:selected").val())
 }
 
-events()
+loadEvents()
 functions.loadPagination();

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "The front end code audition for ILM Professional Services",
   "scripts": {
-    "start": "node serve.js",
+    "start": "node server.js",
     "test": "mocha --require test/setup.js",
     "dev": "nodemon server.js"
   },
@@ -14,17 +14,17 @@
   "author": "Stephen Kelzer",
   "license": "MIT",
   "engines": {
-    "node": "8.13.0"
+    "node": "10.16.0"
   },
   "main": "serve.js",
   "devDependencies": {
-    "bootstrap": "4.3.1",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "nodemon": "^1.19.4",
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "bootstrap": "4.3.1",
     "cuid": "^2.1.6",
     "ejs": "^2.7.2",
     "express": "^4.16.4"
