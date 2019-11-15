@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="\styles\bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark navbar-dark mb-4">
+        <a class="navbar-brand" href="/">ActiFi Code Audition</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4">Fantasy League Players</h1>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#formModal" data-whatever="@mdo">Add
+                    Player</button>
+            </div>
+
+            <div class="col">
+
+                <ul class="pagination justify-content-end">
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <table class="table table-bordered table-striped table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Jersey Number</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">Position</th>
+                            <th scope="col" style="width:1px;white-space:nowrap;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <label class="d-inline-block">
+                    <select id="select-results" class="form-control form-control-sm d-inline-block"
+                        style="width: auto;">
+                        <option value="10">10</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> results per page</label>
+
+            </div>
+
+            <div class="col">
+
+                <ul class="pagination justify-content-end">
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalLabel">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="player-form">
+                        <input type="text" class="form-control" hidden id="index" />
+                        <input type="checkbox" lass="form-control" hidden id="isnew" />
+                        <div class="form-group">
+                            <label for="name" class="col-form-label">Name:</label>
+                            <input type="text" required class="form-control" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="team" class="col-form-label">Team:</label>
+                            <input type="text" required class="form-control" id="team" />
+                        </div>
+                        <div class="form-group">
+                            <label for="jersey_number" class="col-form-label">Jersey Number:</label>
+                            <input type="number" required class="form-control" id="jersey_number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="position" class="col-form-label">Position:</label>
+                            <input type="text" required class="form-control" id="position" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete player</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="player-delete-form">
+                        <div class="form-group">
+                            <label id="player-name" class="col-form-label">Do you want delete player?</label>
+                        </div>
+                        <input type="text" class="form-control" hidden id="index" />
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="\scripts\api-service.js"></script>
+    <script type="text/javascript" src="\scripts\variables.js"></script>
+    <script type="text/javascript" src="\scripts\index.js"></script>
+
+</body>

@@ -25,6 +25,8 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "cuid": "^2.1.6",
+    "ejs": "^2.7.2",
     "express": "^4.16.4"
   }
 }

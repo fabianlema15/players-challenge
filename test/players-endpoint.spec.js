@@ -113,7 +113,7 @@ describe('Players Endpoints', function () {
       })
     })
 
-    describe('DELETE /:player_index', () => {
+    describe('DELETE /:player_id', () => {
       context('DELETE Player Successful', () => {
 
         it('Respons 200 when inactivated', () => {
